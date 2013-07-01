@@ -9,5 +9,6 @@ feature "User views todos" do
       expect(page).to_not have_css 'li', text: 'Buy eggs'
     end
 
+
   end
 end
