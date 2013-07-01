@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'high_voltage'
 
 group :development, :test do
+  gem 'pry'
   gem 'rspec-rails', '~> 2.13.0'
   gem 'capybara', '~> 2.1.0'
 end
