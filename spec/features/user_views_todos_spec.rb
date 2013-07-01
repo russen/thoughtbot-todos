@@ -5,10 +5,8 @@ feature "User views todos" do
     Todo.create(title: "Buy eggs", owner_email: 'not_me@example.com')
     sign_in_as 'person@example.com'
 
-    within 'ul.todos' do
-      expect(page).to_not have_css 'li', text: 'Buy eggs'
-    end
+    todo_on_page = TodoOnPage.new('Buy eggs')
 
-
+    expect(todo_on_page).to_not be_visible
   end
 end
