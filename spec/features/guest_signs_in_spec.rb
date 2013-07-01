@@ -4,11 +4,9 @@ feature 'Guest signs in' do
 
   scenario 'successfully' do
     visit root_path
-
     expect(page).not_to display_welcome_message
 
-    fill_in 'Email', with: 'person@example.com'
-    click_on 'Sign in'
+    sign_in_as 'person@example.com'
 
     expect(page).to display_welcome_message "person@example.com"
   end
